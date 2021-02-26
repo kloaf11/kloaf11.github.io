@@ -244,7 +244,12 @@ I made the main system sleeker and simpler where it was just log in and calling 
 
 Additional enhancements that could be added on top would be a GUI. In addition to that, you could add in the ability to have different levels of ZK and HR personnel, so they have higher access in to respect their higher level of responsibilities. This would allow additional functions and features to be modularly added in. Including but not limited to adding in records, updating records, and deleting them as necessary to maintain accurate records. Instead of deleting though for posterity I would probably program a deleted flag to indicate that it should only be shown when looking for deleted records which would be limited to higher level personnel.
 
-**Portfolio Links**
+
+**Links to project File Downloads**
+- [Application](ZooMonitoringSystem.zip)
+- [SQL Files and Bak](Codes_and_Backups_for_CS499_SQL.zip)
+
+
 **Portfolio Links**
 - [Professional Self-Assessment](index.html)
 - [Refinement Plan & Code Review](CodeReview.html)
