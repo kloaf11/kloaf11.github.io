@@ -205,8 +205,8 @@ And just like animal any result that matches more than one row of results in SQL
 All the choices call a sql statement constructor method and returns that string and the actual query is don by a single statement in the main of each class. It's possible that I could even make a sql statment running query. and pass each statement to it. To minimize the amount of places connections are opened or close.
 
 **Portfolio Links**
-- [Professional Self-Assessment](kloaf11.github.io/index.html)
-- [Refinement Plan & Code Review](kloaf11.github.io/CodeReview.html)
-- [Enhancement One](kloaf11.github.io/Enhancement1.html)
-- [Enhancement Two](kloaf11.github.io/Enhancement2.html)
-- [Enhancement Three](kloaf11.github.io/Enhancement3.html)
+- [Professional Self-Assessment](index.html)
+- [Refinement Plan & Code Review](CodeReview.html)
+- [Enhancement One](Enhancement1.html)
+- [Enhancement Two](Enhancement2.html)
+- [Enhancement Three](Enhancement3.html)
