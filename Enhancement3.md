@@ -9,7 +9,7 @@ I chose to do this artifact from scratch because it allowed me to showcase a few
 
 <details><summary>SQL creation scripts</summary>
 <details><summary>Security Script</summary>
-  ``` SQL
+~~~
   
       BEGIN TRANSACTION
       SET QUOTED_IDENTIFIER ON
@@ -43,7 +43,7 @@ I chose to do this artifact from scratch because it allowed me to showcase a few
 </details>
 
 <details><summary>Habitat Script</summary>
-``` SQL
+~~~
 
       BEGIN TRANSACTION
       SET QUOTED_IDENTIFIER ON
@@ -81,7 +81,7 @@ I chose to do this artifact from scratch because it allowed me to showcase a few
 </details>
 
 <details><summary>Animal Script</summary>
-``` SQL
+~~~
   
         BEGIN TRANSACTION
       SET QUOTED_IDENTIFIER ON
@@ -121,7 +121,7 @@ I chose to do this artifact from scratch because it allowed me to showcase a few
 </details>
 
 <details><summary>Switch within new main menu</summary> 
-``` SQL
+~~~
   
       BEGIN TRANSACTION
     SET QUOTED_IDENTIFIER ON
@@ -169,7 +169,7 @@ the JDBC java syntax I used can be found below.
 
 
 <details><summary>SQL example</summary> 
-``` SQL
+~~~
   
         String connectionUrl = "jdbc:sqlserver://localhost:56219;databaseName=ZooInformationSystem;user=ZooAppUser;password=123;";
   
@@ -227,8 +227,8 @@ the JDBC java syntax I used can be found below.
 
 
 **Portfolio Links**
-- [Professional Self-Assessment](kloaf11.github.io/index.html)
-- [Refinement Plan & Code Review](kloaf11.github.io/CodeReview.html)
-- [Enhancement One](kloaf11.github.io/Enhancement1.html)
-- [Enhancement Two](kloaf11.github.io/Enhancement2.html)
-- [Enhancement Three](kloaf11.github.io/Enhancement3.html)
+- [Professional Self-Assessment](index.html)
+- [Refinement Plan & Code Review](CodeReview.html)
+- [Enhancement One](Enhancement1.html)
+- [Enhancement Two](Enhancement2.html)
+- [Enhancement Three](Enhancement3.html)
