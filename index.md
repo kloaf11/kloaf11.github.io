@@ -26,9 +26,9 @@ These are not the only things I learned in my time during the Computer Science c
 Currently my Snr DBA position is with the state which is a good learning position in an advanced area of Databases and in this case, specifically SQL Server. I hope to learn from this experience and either move into a managerial position or a more full stack position at a private company preferably with remote working options. My time in the military has given me an aptitude and the skills necessary for leadership as I was the highest individual in my field which was Radio Repair. I also as the only person who knew radio took care of routine maintenance, installation, and inventory management for them. I had to make reports and decisions for the entire company regarding the radios to my company command and take their feedback to plan of action on how to achieve our goals and locate individuals and train them on how to perform the tasks within a quick manner while making sure they knew exactly what needed to be done so that the work only needed to be checked later and not fixed by me making my rounds once finished. Military has taught me attention to detail, how to stick to a schedule and how to work under pressure. I hope to turn these skills into professional experience in the civilian job sector.
 
 **Portfolio Links**
-- [Professional Self-Assessment](kloaf11.github.io/index.html)
-- [Refinement Plan & Code Review](kloaf11.github.io/CodeReview.html)
-- [Enhancement One](kloaf11.github.io/Enhancement1.html)
-- [Enhancement Two](kloaf11.github.io/Enhancement2.html)
-- [Enhancement Three](kloaf11.github.io/Enhancement3.html)
+- [Professional Self-Assessment](index.html)
+- [Refinement Plan & Code Review](CodeReview.html)
+- [Enhancement One](Enhancement1.html)
+- [Enhancement Two](Enhancement2.html)
+- [Enhancement Three](Enhancement3.html)
 
