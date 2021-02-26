@@ -102,7 +102,7 @@ and I transfered over and added new variables for the animals. As well as making
 I have added a lot of information to most of the fields that seemed relavent without overdoing it. In addition to additional fields I increased the amount of situations it can handle. So previously it only handled looking for animal by type in a single list of 1 of each animal type. But for Animal I added a search for Name, Type and SQL ID.
 <details><summary>New animal search types</summary>
   <p>
-  ```
+  ~~~
   
         // choice on what to search by
         System.out.println("Welcome to the animal record section. \n Would you look someone up by the animal ID, Type, or Name? Please Enter 'ID', 'Type', or 'Name' \n");
@@ -127,7 +127,7 @@ And just like animal any result that matches more than one row of results in SQL
 
 <details><summary>New animal search types</summary>
   <p>
-  ```
+  ~~~
     
     Looking at the Name or ID choice.
     System.out.println("Welcome to the employee record section. \n Would you look someone up by the employee ID or Name? Please Enter 'Name' or 'ID' \n");
