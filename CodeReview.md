@@ -21,8 +21,8 @@ This artifact is going to be in theory made from scratch, but you can consider i
 
 
 **Portfolio Links**
-- [Professional Self-Assessment](kloaf11.github.io/index.html)
-- [Refinement Plan & Code Review](kloaf11.github.io/CodeReview.html)
-- [Enhancement One](kloaf11.github.io/Enhancement1.html)
-- [Enhancement Two](kloaf11.github.io/Enhancement2.html)
-- [Enhancement Three](kloaf11.github.io/Enhancement3.html)
+- [Professional Self-Assessment](index.html)
+- [Refinement Plan & Code Review](CodeReview.html)
+- [Enhancement One](Enhancement1.html)
+- [Enhancement Two](Enhancement2.html)
+- [Enhancement Three](Enhancement3.html)
