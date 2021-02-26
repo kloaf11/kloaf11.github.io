@@ -75,7 +75,7 @@ public class ZooKeeperMonitoringSystem {
 I went from the long main menu which complicated the main program more than it needed to and in the new addition I reduced the code in the main program to be more steam lined and regarded the main menu into a structure that fits the new format.
 
 <details><summary>New Main method</summary>
-```java
+~~~
 public class ZooMonitoringSystem {
 
     /**
@@ -133,7 +133,7 @@ public class ZooMonitoringSystem {
 I made the main system sleeker and simpler where it was just log in and calling the main menu after trimming the return from login. With the addition of login verification code was added as well as it pulled based on username the users access level. this is important for the new main menu program which uses that to show only the options available to the user.
 
 <details><summary>Switch within new main menu</summary>
-  ```java
+~~~
    while(!selection.toLowerCase().equals("exit")){
             switch (level) {
                 case "HR": 
@@ -210,7 +210,7 @@ I made the main system sleeker and simpler where it was just log in and calling 
   
 
 <details><summary>SQL Logic in Login class using JDBC</summary> 
-  ``` java
+~~~
   String access = null;
         String connectionUrl = "jdbc:sqlserver://localhost:56219;databaseName=ZooInformationSystem;user=ZooAppUser;password=123;";
         
@@ -245,9 +245,10 @@ I made the main system sleeker and simpler where it was just log in and calling 
 Additional enhancements that could be added on top would be a GUI. In addition to that, you could add in the ability to have different levels of ZK and HR personnel, so they have higher access in to respect their higher level of responsibilities. This would allow additional functions and features to be modularly added in. Including but not limited to adding in records, updating records, and deleting them as necessary to maintain accurate records. Instead of deleting though for posterity I would probably program a deleted flag to indicate that it should only be shown when looking for deleted records which would be limited to higher level personnel.
 
 **Portfolio Links**
-- [Professional Self-Assessment](kloaf11.github.io/index.html)
-- [Refinement Plan & Code Review](kloaf11.github.io/CodeReview.html)
-- [Enhancement One](kloaf11.github.io/Enhancement1.html)
-- [Enhancement Two](kloaf11.github.io/Enhancement2.html)
-- [Enhancement Three](kloaf11.github.io/Enhancement3.html)
+**Portfolio Links**
+- [Professional Self-Assessment](index.html)
+- [Refinement Plan & Code Review](CodeReview.html)
+- [Enhancement One](Enhancement1.html)
+- [Enhancement Two](Enhancement2.html)
+- [Enhancement Three](Enhancement3.html)
 
