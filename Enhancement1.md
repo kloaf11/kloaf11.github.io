@@ -10,7 +10,8 @@ For this enhancement I chose to enhance the design and functionality for my Zoo 
 
 <details><summary>Original Main method</summary>
 '''
-public class ZooKeeperMonitoringSystem {
+ 
+    public class ZooKeeperMonitoringSystem {
 
 
     /**
