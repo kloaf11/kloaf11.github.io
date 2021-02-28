@@ -1,6 +1,6 @@
 # Kenneth Borges CS499 ePortfolio
 
-## Enhancement One: Software Design and Engineering
+## Enhancement One: Software Design and Engineering TEST
 
 For this enhancement I chose to enhance the design and functionality for my Zoo Monitoring Project from IT-145. The original purpose of this code was a simple tracking program in using Java to monitor Zoo animals and habitats. My original plan for this enhancement was to add multiple additional uses for this program including a log in feature, Employee Records. I was also planning on a Transfer section originally for new incoming and outgoing animals as a log but due to time constraints with the other sections and learning new methods of performing operations I have never attempted to before that section was dropped.
 
@@ -71,6 +71,9 @@ For this enhancement I chose to enhance the design and functionality for my Zoo 
                 System.out.println("Invalid choice\n");
                 System.out.println("Would you an animal, a habitat, an employee, a transfer, or exit?");
                 userSelection = scan.nextLine();
+ ```
+                
+                
 </details>
 
 I went from the long main menu which complicated the main program more than it needed to and in the new addition I reduced the code in the main program to be more steam lined and regarded the main menu into a structure that fits the new format.
@@ -129,12 +132,15 @@ public class ZooMonitoringSystem {
         
         //exiting main to terminate
         System.exit(0);
+ ```       
+        
+        
  </details>
 
 I made the main system sleeker and simpler where it was just log in and calling the main menu after trimming the return from login. With the addition of login verification code was added as well as it pulled based on username the users access level. this is important for the new main menu program which uses that to show only the options available to the user.
 
 <details><summary>Switch within new main menu</summary>
-~~~
+```
    while(!selection.toLowerCase().equals("exit")){
             switch (level) {
                 case "HR": 
@@ -202,6 +208,9 @@ I made the main system sleeker and simpler where it was just log in and calling 
                     }
                     
                     break;
+  ```                  
+                    
+  
   </details>
   
   This shows the switch used based on the access level retrieved from the new login for a more direct this is what your access allowed method. To guard personal information and limit user access to a job level need basis only. In addition to the limited access and new login method. I have added an Employees class which allows HR and admin personnel to retrieve employee records with data such as Name, hired, position, salary and for Zookeepers the habitats they maintain.
@@ -211,7 +220,7 @@ I made the main system sleeker and simpler where it was just log in and calling 
   
 
 <details><summary>SQL Logic in Login class using JDBC</summary> 
-~~~
+```
   String access = null;
         String connectionUrl = "jdbc:sqlserver://localhost:56219;databaseName=ZooInformationSystem;user=ZooAppUser;password=123;";
         
@@ -241,6 +250,8 @@ I made the main system sleeker and simpler where it was just log in and calling 
             connection.close();
             statement.close();
         }
+```
+        
 </details>
 
 Additional enhancements that could be added on top would be a GUI. In addition to that, you could add in the ability to have different levels of ZK and HR personnel, so they have higher access in to respect their higher level of responsibilities. This would allow additional functions and features to be modularly added in. Including but not limited to adding in records, updating records, and deleting them as necessary to maintain accurate records. Instead of deleting though for posterity I would probably program a deleted flag to indicate that it should only be shown when looking for deleted records which would be limited to higher level personnel.
