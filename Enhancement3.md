@@ -1,6 +1,6 @@
 # Kenneth Borges CS499 ePortfolio
 
-## Enhancement Two: Data Structure and Algorithms
+## Enhancement Three: Databases
 
 The artifact I chose for this was to augment the Zoo monitoring program with a completely new SQL Server Database over the text files.
 
@@ -223,7 +223,11 @@ the JDBC java syntax I used can be found below.
             statement.close();
 </details>
 
+These are my improvements to database aspect of the program by making it from scratch.
 
+**Links to project File Downloads**
+- [Application](ZooMonitoringSystem.zip)
+- [SQL Files and Bak](Codes_and_Backups_for_CS499_SQL.zip)
 
 
 **Portfolio Links**
