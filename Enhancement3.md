@@ -1,15 +1,13 @@
 ---
-title: Enhancement Three
-description: Enhancement three of the zoo monitoring project, covering SQL Server tables and JDBC access in place of text files.
+title: Databases
+description: "SQL Server tables and JDBC access for the zoo monitoring application, replacing the original text files. Stack: Java, JDBC, and SQL Server."
 ---
 
-## Enhancement Three: Databases
+## Zoo monitoring: databases
 
-The artifact for this enhancement augments the zoo monitoring program with a new SQL Server database in place of the text files.
+I replaced the text files with a SQL Server database that the Java application reads through JDBC. The tables are small and realistic enough for the program to query, and the connection settings are the only piece that has to change to point the application at another server.
 
-I built this part from scratch so I could show two things. The first is creating a usable, realistic database from nothing. The second is learning JDBC drivers for Java: how to install them and how to use them. The result is a usable product. The application could be pointed at a virtual server and, with a small code change, be ready to use there. If it needed to be set up in more than one place, the server and login entries could move into a config file that the SQL methods read. That would let each setup use its own server without changing the Java methods.
-
-The scripts below create the tables.
+The tables are Security (login and access level), Habitats, Animals, and Employees. The scripts below create them. Sample data is in the project download. Most tables, other than employees, include rows that exercise the program, including more than one animal of a type.
 
 <details markdown="1">
 <summary>Security script</summary>
@@ -172,15 +170,13 @@ COMMIT
 
 </details>
 
-With these scripts I set up basic tables that JDBC can connect to. I also created data that is included with the project files. The data is not trivial. Most tables, other than employees, include rows that exercise the program, including more than one animal type.
-
-The JDBC example below is an excerpt.
+The Java excerpt below is the JDBC connection and an employee lookup by id. The password in the connection string is a placeholder. Replace it before using the code.
 
 <details markdown="1">
 <summary>JDBC example (excerpt)</summary>
 
 ```java
-String connectionUrl = "jdbc:sqlserver://localhost:56219;databaseName=ZooInformationSystem;user=ZooAppUser;password=123;";
+String connectionUrl = "jdbc:sqlserver://localhost:56219;databaseName=ZooInformationSystem;user=ZooAppUser;password=YOUR_PASSWORD;";
 
 System.out.println("Please enter the ID of the employee. \n");
 
@@ -234,7 +230,9 @@ System.out.println("Please enter the ID of the employee. \n");
 
 </details>
 
-These are my improvements to the database side of the program, built from scratch.
+That is the database side of the application: tables created for this project, and Java reading them with JDBC.
+
+A recorded walkthrough is on the [code review](CodeReview.html) page.
 
 {% include downloads.html %}
 

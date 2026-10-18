@@ -1,11 +1,11 @@
 ---
-title: Enhancement Two
-description: Enhancement two of the zoo monitoring project, covering data structures and searches for animals, habitats, and employees.
+title: Algorithms and Data Structures
+description: "How the zoo monitoring application stores records and searches them by name, type, and ID. Stack: Java, JDBC, and SQL Server."
 ---
 
-## Enhancement Two: Data Structures and Algorithms
+## Zoo monitoring: algorithms and data structures
 
-The artifact I chose for data structures and algorithms was the same as the first enhancement. My original plan was to add a more robust data structure to the elements and classes this code covers.
+This is the same Java application. The original records were text files, one block of text per animal or habitat. I replaced that layout with tables and added searches that can return more than one match.
 
 <details markdown="1">
 <summary>Original text files</summary>
@@ -65,7 +65,11 @@ habitat.txt
 
 </details>
 
-I transferred that data and added new fields for the animals. I also added user and employee data for logging in and for employee records.
+The text files held one animal of each type and a few habitats. Notes were marked in the text itself. There was no id, and a search could not return several rows.
+
+### Tables and columns
+
+I moved animals, habitats, users, and employees into SQL Server tables and added fields the text files did not have, including birth date, feedings, hire date, and habitat ids. Column names below are the names in the database. `HeathConcerns` is spelled that way in the table.
 
 <details markdown="1">
 <summary>SQL data types and columns</summary>
@@ -111,21 +115,23 @@ I transferred that data and added new fields for the animals. I also added user 
 
 </details>
 
-I added information to most of the fields that seemed relevant, without overdoing it. I also increased the number of situations the program can handle. Previously it only looked up an animal by type, in a single list with one of each animal type. For animals, I added a search by name, type, and SQL ID.
+### Searches
+
+Animals can be looked up by name, type, or id. The text-file version could only look up an animal by type, and it held one animal of each type.
 
 <details markdown="1">
 <summary>New animal search types (excerpt)</summary>
 
 ```java
 // choice on what to search by
-System.out.println("Welcome to the animal record section. \n Would you look someone up by the animal ID, Type, or Name? Please Enter 'ID', 'Type', or 'Name' \n");
+System.out.println("Welcome to the animal record section. \n Would you like to look someone up by the animal ID, Type, or Name? Please Enter 'ID', 'Type', or 'Name' \n");
 lookupChoice = scan.nextLine();
 
 //Verification for selection
 if(lookupChoice.toUpperCase().contains("NAME") == false && lookupChoice.toUpperCase().contains("ID") == false && lookupChoice.toUpperCase().contains("TYPE") == false){
     while( lookupChoice.toUpperCase().contains("NAME") == false && lookupChoice.toUpperCase().contains("ID") && lookupChoice.toUpperCase().contains("TYPE") == false){
         System.out.println("Invalid choice\n");
-        System.out.println("Invalid animal ID, Type, or Name? Please Enter 'ID', 'Type', or 'Name' \n");
+        System.out.println("Invalid choice. Please enter 'ID', 'Type', or 'Name' \n");
         lookupChoice = scan.nextLine();
     }
 }
@@ -133,9 +139,7 @@ if(lookupChoice.toUpperCase().contains("NAME") == false && lookupChoice.toUpperC
 
 </details>
 
-There are also new searches for employees and habitats. Habitats can be searched by name and ID, similar to animals. Employees can be searched by ID and name. A name search can use the first name only, the last name only, or both.
-
-As with animals, any result that matches more than one SQL row is shown in full. The original program could not do that.
+Habitats can be looked up by name or id. Employees can be looked up by id or by name, and a name search can use the first name, the last name, or both. When more than one row matches, the program walks the result set and shows each match. The text-file version could not do that.
 
 <details markdown="1">
 <summary>Employee search choices (excerpt)</summary>
@@ -143,14 +147,14 @@ As with animals, any result that matches more than one SQL row is shown in full.
 Looking at the name or ID choice.
 
 ```java
-System.out.println("Welcome to the employee record section. \n Would you look someone up by the employee ID or Name? Please Enter 'Name' or 'ID' \n");
+System.out.println("Welcome to the employee record section. \n Would you like to look someone up by the employee ID or Name? Please Enter 'Name' or 'ID' \n");
 lookupChoice = scan.nextLine();
 
 //Verification for selection
 if(lookupChoice.toUpperCase().contains("NAME") == false && lookupChoice.toUpperCase().contains("ID") == false){
     while( lookupChoice.toUpperCase().contains("NAME") == false && lookupChoice.toUpperCase().contains("ID")){
         System.out.println("Invalid choice\n");
-        System.out.println("Would you look someone up by the employee ID or Name? Please Enter 'Name' or 'ID'? \n");
+        System.out.println("Would you like to look someone up by the employee ID or Name? Please Enter 'Name' or 'ID'? \n");
         lookupChoice = scan.nextLine();
     }
 }
@@ -160,13 +164,13 @@ Then the logic for the name choices.
 
 ```java
 if(lookupChoice.toUpperCase().contains("NAME")) {
-    System.out.println("Would you look by First name, last name or both? Please enter 'First', 'Last', or 'Both' \n");
+    System.out.println("Would you like to look by First name, last name or both? Please enter 'First', 'Last', or 'Both' \n");
     lookup2 = scan.nextLine();
      //Verification for selection
     if(lookup2.toUpperCase().contains("FIRST") == false && lookup2.toUpperCase().contains("LAST") == false && lookup2.toUpperCase().contains("BOTH") == false ){
         while(lookup2.toUpperCase().contains("FIRST") == false && lookup2.toUpperCase().contains("LAST") == false && lookup2.toUpperCase().contains("BOTH") == false){
             System.out.println("Invalid choice\n");
-            System.out.println("Would you look by First name, last name or both? Please enter 'First', 'Last', or 'Both' \n");
+            System.out.println("Would you like to look by First name, last name or both? Please enter 'First', 'Last', or 'Both' \n");
             lookup2 = scan.nextLine();
         }
     }
@@ -223,7 +227,9 @@ select = idSearch(id);
 
 </details>
 
-Each choice calls a method that builds a SQL statement and returns that string. The query itself is run by a single statement in the main method of each class. I could go further and use one method that runs a SQL statement, and pass each statement to it, so connections are opened and closed in fewer places.
+Each choice builds a SQL string in a method, and one statement in the class runs that string. A later improvement would be a single method that runs any of those statements, so the connection is opened and closed in one place.
+
+A recorded walkthrough is on the [code review](CodeReview.html) page.
 
 {% include downloads.html %}
 

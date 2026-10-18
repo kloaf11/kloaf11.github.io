@@ -36,6 +36,10 @@ summary:focus-visible,
   clear: both;
 }
 
+#header nav ul li.fork + li.fork {
+  margin-left: 8px;
+}
+
 #header nav ul li a {
   color: #ffffff;
   background: #3f6b0a linear-gradient(#4a7c0f, #3f6b0a);
@@ -129,5 +133,16 @@ pre:focus,
 
   section #title h1 {
     font-size: 26px;
+  }
+
+  #header nav ul li.fork,
+  #header nav ul li.fork + li.fork {
+    float: none;
+    display: inline-block;
+    margin: 0 8px 8px 0;
+  }
+
+  section #title p {
+    font-size: 16px;
   }
 }

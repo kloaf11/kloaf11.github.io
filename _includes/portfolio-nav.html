@@ -1,10 +1,10 @@
 <nav class="portfolio-nav" aria-label="Portfolio pages">
-  <h2>Portfolio links</h2>
+  <h2>Portfolio</h2>
   <ul>
-    <li><a href="{{ '/' | relative_url }}"{% if include.current == "home" %} aria-current="page"{% endif %}>Professional Self-Assessment</a></li>
-    <li><a href="{{ '/CodeReview.html' | relative_url }}"{% if include.current == "review" %} aria-current="page"{% endif %}>Refinement Plan &amp; Code Review</a></li>
-    <li><a href="{{ '/Enhancement1.html' | relative_url }}"{% if include.current == "one" %} aria-current="page"{% endif %}>Enhancement One</a></li>
-    <li><a href="{{ '/Enhancement2.html' | relative_url }}"{% if include.current == "two" %} aria-current="page"{% endif %}>Enhancement Two</a></li>
-    <li><a href="{{ '/Enhancement3.html' | relative_url }}"{% if include.current == "three" %} aria-current="page"{% endif %}>Enhancement Three</a></li>
+    <li><a href="{{ '/' | relative_url }}"{% if include.current == "home" %} aria-current="page"{% endif %}>About</a></li>
+    <li><a href="{{ '/Enhancement1.html' | relative_url }}"{% if include.current == "one" %} aria-current="page"{% endif %}>Software design and engineering</a></li>
+    <li><a href="{{ '/Enhancement2.html' | relative_url }}"{% if include.current == "two" %} aria-current="page"{% endif %}>Algorithms and data structures</a></li>
+    <li><a href="{{ '/Enhancement3.html' | relative_url }}"{% if include.current == "three" %} aria-current="page"{% endif %}>Databases</a></li>
+    <li><a href="{{ '/CodeReview.html' | relative_url }}"{% if include.current == "review" %} aria-current="page"{% endif %}>Code review</a></li>
   </ul>
 </nav>
