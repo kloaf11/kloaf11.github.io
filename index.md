@@ -1,34 +1,31 @@
-# Kenneth Borges CS499 ePortfolio
+---
+layout: default
+title: Kenneth Borges CS499 ePortfolio
+description: Professional self-assessment and CS499 ePortfolio for Kenneth Borges at Southern New Hampshire University.
+---
 
 ## Introduction
 
-I am Kenneth Borges. I work currently as a Senior Database Analyst and I have been working on my Computer Science B.S. degree for a few years. I am a veteran of the Army. After I get my degree, I would be looking for a position to improve my existing skills as a SQL developer/admin. Also, to note this portfolio involves enhancing one project in multiple ways for each enhancement planned.
-
+I am Kenneth Borges. I currently work as a Senior Database Analyst, and I have been working on my Computer Science B.S. degree for a few years. I am a veteran of the Army. After I get my degree, I would look for a position that builds on my existing skills as a SQL developer and administrator. This portfolio enhances one project in several ways, with one enhancement for each planned category.
 
 ## Reflection on Education
 
-I learned a lot from my time spent in the Computer Science course at SNHU. I have been introduced and programmed using quite a few languages including C++, Python, Java, and R. I have learned that rigorous testing of programs and attention to detail are very important to deliver a finished and quality product. They taught me the best practices for coding as well as how to work in an agile environment. Proper testing is important because it allows you to reduce the number of bugs that may have been missed during coding including logical bugs. It also tests each module and the system to make sure each part functions as it should. In addition to that, I have learned valuable lessons on cooperation and how to work with teammates with source control such as bit bucket and the importance of proper maintenance and procedure when using Source Control. Source control is important because it allows developers to work on their own modules of enhancement and test them in isolation before merging them into test branches to test with any other changes and it allows you to pull fresh copy or go back in the timeline of a program of any change that causes any issues or bugs.
+I learned a lot from my time in the Computer Science program at SNHU. I was introduced to programming in several languages, including C++, Python, Java, and R. I learned that rigorous testing and attention to detail are very important when delivering a finished, quality product. The program taught me coding best practices and how to work in an agile environment. Proper testing matters because it reduces the number of bugs that can be missed during coding, including logical bugs. It also tests each module and the system to make sure each part functions as it should. I also learned valuable lessons about cooperation, working with teammates in source control such as Bitbucket, and the importance of maintenance and procedure when using source control. Source control matters because it lets developers work on their own enhancements and test them in isolation before merging them into test branches. It also lets you pull a fresh copy, or go back in a program's history, when a change causes issues or bugs.
 
-**Classes Taken**
-In IT-145 I learned about app development and how to program multiple different cases of input read and developed a simple but effective Zoo monitoring Application. This is the artifact I will be using to showcase my enhancements and I will cover that more in the Refinement Plan.
+### Classes Taken
 
-In CS-250 I learned important information on how the software development lifecycle functions and the many roles in it. I also took a view into each role to learn the mindset behind the product owner, project manager, testers, and coders within the team in order to have an understanding of each person’s role in order to effectively communicate between team members. 
+In IT-145 I learned about app development and how to program for several different kinds of input. I developed a simple but effective zoo monitoring application. This is the artifact I use to showcase my enhancements, and I cover it in the refinement plan.
 
-In CS-310 I learned an important lesson on teamwork and collaboration, and it was my first time learning about integrated bitbucket in an IDE. In this program me and my classmates all contributed side by side in a juke box program. We added unit tests for each module we added and had to edit the main program using proper source control methods to include our new methods, data and any other piece needed for our piece to work. 
+In CS-250 I learned how the software development lifecycle works and about the many roles in it. I also looked at each role to understand the mindset of the product owner, project manager, testers, and coders, so I could communicate more effectively with teammates.
 
-In CS-340 I learned how Client/Server development worked. And we worked with many programs creating server and client programs. We also learned about creating and managing threads on a Server and how they interact with a client application to better enhance our knowledge of both sides of the development process. As well as the security involved in and needed when operating such relationships within a company.
+In CS-310 I learned an important lesson about teamwork and collaboration, and it was my first time using Bitbucket inside an IDE. In this program, my classmates and I contributed side by side to a jukebox program. We added unit tests for each module we added, and we edited the main program with source control so our new methods, data, and other pieces were included.
 
-These are not the only things I learned in my time during the Computer Science course, but I do believe these highlights important learning experience and professional development I had when it came to earning my degree. These are wide ranging applicable lessons that will help me and others on any team I am on in the future to learn and educate each other together.
+In CS-340 I learned how client/server development works. We built several server and client programs. We also learned about creating and managing threads on a server and how they interact with a client application, which strengthened our understanding of both sides of the process, including the security those relationships need inside a company.
 
+These are not the only things I learned in the Computer Science program, but they are highlights of the learning and professional development that came with earning my degree. They are wide-ranging lessons I can use with any team I am on in the future, so we can keep learning from each other.
 
 ## To the Future
 
-Currently my Snr DBA position is with the state which is a good learning position in an advanced area of Databases and in this case, specifically SQL Server. I hope to learn from this experience and either move into a managerial position or a more full stack position at a private company preferably with remote working options. My time in the military has given me an aptitude and the skills necessary for leadership as I was the highest individual in my field which was Radio Repair. I also as the only person who knew radio took care of routine maintenance, installation, and inventory management for them. I had to make reports and decisions for the entire company regarding the radios to my company command and take their feedback to plan of action on how to achieve our goals and locate individuals and train them on how to perform the tasks within a quick manner while making sure they knew exactly what needed to be done so that the work only needed to be checked later and not fixed by me making my rounds once finished. Military has taught me attention to detail, how to stick to a schedule and how to work under pressure. I hope to turn these skills into professional experience in the civilian job sector.
+Currently my Senior DBA position is with the state, which is a good learning position in an advanced area of databases, specifically SQL Server. I hope to learn from this experience and either move into a managerial position or a more full-stack position at a private company, preferably with remote working options. My time in the military gave me an aptitude and the skills for leadership. I was the highest individual in my field, which was radio repair. As the only person who knew radio, I also took care of routine maintenance, installation, and inventory management for the radios. I had to make reports and decisions for the entire company regarding the radios, bring them to my company command, and take their feedback to form a plan of action. That plan covered how to achieve our goals, find people, and train them to do the tasks quickly, while making sure they knew exactly what needed to be done. The work then only needed to be checked later, not fixed when I made my rounds. The military taught me attention to detail, how to stick to a schedule, and how to work under pressure. I hope to turn these skills into professional experience in the civilian sector.
 
-**Portfolio Links**
-- [Professional Self-Assessment](index.html)
-- [Refinement Plan & Code Review](CodeReview.html)
-- [Enhancement One](Enhancement1.html)
-- [Enhancement Two](Enhancement2.html)
-- [Enhancement Three](Enhancement3.html)
-
+{% include portfolio-nav.html %}

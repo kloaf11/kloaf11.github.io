@@ -1,2 +1,11 @@
+title: Kenneth Borges CS499 ePortfolio
+description: Computer Science, Southern New Hampshire University
+lang: en-US
+url: https://kloaf11.github.io
 theme: jekyll-theme-midnight
 markdown: kramdown
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
