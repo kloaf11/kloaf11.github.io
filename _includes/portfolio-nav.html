@@ -1,0 +1,10 @@
+<nav class="portfolio-nav" aria-label="Portfolio">
+  <h2>Portfolio Links</h2>
+  <ul>
+    <li><a href="{{ '/index.html' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>Professional Self-Assessment</a></li>
+    <li><a href="{{ '/CodeReview.html' | relative_url }}"{% if page.url == '/CodeReview.html' %} aria-current="page"{% endif %}>Refinement Plan &amp; Code Review</a></li>
+    <li><a href="{{ '/Enhancement1.html' | relative_url }}"{% if page.url == '/Enhancement1.html' %} aria-current="page"{% endif %}>Enhancement One</a></li>
+    <li><a href="{{ '/Enhancement2.html' | relative_url }}"{% if page.url == '/Enhancement2.html' %} aria-current="page"{% endif %}>Enhancement Two</a></li>
+    <li><a href="{{ '/Enhancement3.html' | relative_url }}"{% if page.url == '/Enhancement3.html' %} aria-current="page"{% endif %}>Enhancement Three</a></li>
+  </ul>
+</nav>
