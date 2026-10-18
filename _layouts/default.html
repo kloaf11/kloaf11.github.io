@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/fixes.css' | relative_url }}">
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header id="header">
+      <nav aria-label="Repository">
+        <ul>
+          <li class="fork"><a href="{% if site.github.repository_url %}{{ site.github.repository_url }}{% else %}https://github.com/kloaf11/kloaf11.github.io{% endif %}">View on GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+      <main id="content">
+        <section>
+          <div id="title">
+            <h1>{{ site.title | default: site.github.repository_name }}</h1>
+            {% if site.tagline %}
+            <p>{{ site.tagline }}</p>
+            {% endif %}
+            <hr>
+            <span class="credits left">Project maintained by <a href="{% if site.github.owner_url %}{{ site.github.owner_url }}{% else %}https://github.com/kloaf11{% endif %}">{% if site.github.owner_name %}{{ site.github.owner_name }}{% else %}kloaf11{% endif %}</a></span>
+            <span class="credits right">Hosted on GitHub Pages. Theme by <a href="https://github.com/pages-themes/midnight">pages-themes/midnight</a></span>
+          </div>
+
+          {{ content }}
+        </section>
+      </main>
+    </div>
+    <script>
+      function markScrollableCode() {
+        document.querySelectorAll("pre").forEach(function (el) {
+          if (el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1) {
+            el.setAttribute("tabindex", "0");
+          }
+        });
+      }
+      markScrollableCode();
+      document.querySelectorAll("details").forEach(function (item) {
+        item.addEventListener("toggle", markScrollableCode);
+      });
+    </script>
+  </body>
+</html>

@@ -1,218 +1,230 @@
-# Kenneth Borges CS499 ePortfolio
+---
+title: Enhancement Two
+description: Enhancement two of the zoo monitoring project, covering data structures and searches for animals, habitats, and employees.
+---
 
-## Enhancement Two: Data Structure and Algorithms
+## Enhancement Two: Data Structures and Algorithms
 
-The artifact I chose for Data Structure and alhorithms was the same as the first enhancement. My original plan for this structure was to add more robust data structure to the elements and classes that this code covers.
+The artifact I chose for data structures and algorithms was the same as the first enhancement. My original plan was to add a more robust data structure to the elements and classes this code covers.
 
+<details markdown="1">
+<summary>Original text files</summary>
 
-<details><summary>text block of original Text Files</summary> 
- animals.txt
-    Details on lions
-  Details on tigers
-  Details on bears
-  Details on giraffes
+```text
+animals.txt
+    Details on lions
+  Details on tigers
+  Details on bears
+  Details on giraffes
 
-  Animal - Lion
-  Name: Leo
-  Age: 5
-  *****Health concerns: Cut on left front paw
-  Feeding schedule: Twice daily
+  Animal - Lion
+  Name: Leo
+  Age: 5
+  *****Health concerns: Cut on left front paw
+  Feeding schedule: Twice daily
 
-  Animal - Tiger
-  Name: Maj
-  Age: 15
-  Health concerns: None
-  Feeding schedule: 3x daily
+  Animal - Tiger
+  Name: Maj
+  Age: 15
+  Health concerns: None
+  Feeding schedule: 3x daily
 
-  Animal - Bear
-  Name: Baloo
-  Age: 1
-  Health concerns: None
-  *****Feeding schedule: None on record
+  Animal - Bear
+  Name: Baloo
+  Age: 1
+  Health concerns: None
+  *****Feeding schedule: None on record
 
-  Animal - Giraffe
-  Name: Spots
-  Age: 12
-  Health concerns: None
-  Feeding schedule: Grazing
+  Animal - Giraffe
+  Name: Spots
+  Age: 12
+  Health concerns: None
+  Feeding schedule: Grazing
 
 
 habitat.txt
-    Details on penguin habitat
-  Details on bird house
-  Details on aquarium
+    Details on penguin habitat
+  Details on bird house
+  Details on aquarium
 
-  Habitat - Penguin
-  Temperature: Freezing
-  *****Food source: Fish in water running low
-  Cleanliness: Passed
+  Habitat - Penguin
+  Temperature: Freezing
+  *****Food source: Fish in water running low
+  Cleanliness: Passed
 
-  Habitat - Bird
-  Temperature: Moderate
-  Food source: Natural from environment
-  Cleanliness: Passed
+  Habitat - Bird
+  Temperature: Moderate
+  Food source: Natural from environment
+  Cleanliness: Passed
 
-  Habitat - Aquarium
-  Temperature: Varies with output temperature
-  Food source: Added daily
-  *****Cleanliness: Needs cleaning from algae
+  Habitat - Aquarium
+  Temperature: Varies with output temperature
+  Food source: Added daily
+  *****Cleanliness: Needs cleaning from algae
+```
+
 </details>
 
-and I transfered over and added new variables for the animals. As well as making the users and Employees data for logging in and employee records.
+I transferred that data and added new fields for the animals. I also added user and employee data for logging in and for employee records.
 
-<details><summary>SQL Data types and columns</summary> 
- <p>
- 1. Users:<br/>
-    	Id int NOT NULL,<br/>
-  	    username nchar(10) NULL,  <br/>
-	      password nchar(10) NULL,  <br/>
-	     userLevel nchar(10) NULL  <br/>
- 2. Animals:  <br/>
-        AnimalId int NOT NULL IDENTITY (1, 1),  <br/>
-	      Name nchar(10) NOT NULL,  <br/>
-	      Age int NOT NULL,  <br/>
-	    BirthDate date NULL,  <br/>
-	    FeedingsToday int NOT NULL,  <br/>
-	    FeedingsperDay int NOT NULL,  <br/>
-	    AnimalType nchar(10) NOT NULL,  <br/>
-	    HeathConcerns nchar(50) NULL,  <br/>
-	    Habitat nchar(15) NOT NULL  <br/>
- 3. Habitat:  <br/>
-      ID int NOT NULL IDENTITY (1, 1),  <br/>
-	    Name nchar(20) NOT NULL,  <br/>
-	    DateCleaned date NULL,  <br/>
-	    FoodSource nchar(25) NOT NULL,  <br/>
-	    LastFeed date NULL,  <br/>
-	    Temperature nchar(10) NULL  <br/>
- 3. Employees:  <br/>
-      Id int NOT NULL IDENTITY (1, 1),  <br/>
-	    FirstName nchar(20) NOT NULL,  <br/>
-	    LastName nchar(20) NOT NULL,  <br/>
-	    DateofHire date NOT NULL,  <br/>
-	    Age int NOT NULL,  <br/>
-	    Position nchar(20) NOT NULL,  <br/>
-	    HabitatId1 int NULL,  <br/>
-	    HabitatId2 int NULL,  <br/>
-	    HabitatId3 int NULL,  <br/>
-	    Salary nchar(10) NOT NULL  <br/>
-    
-</p>
+<details markdown="1">
+<summary>SQL data types and columns</summary>
+
+```text
+1. Users:
+   Id int NOT NULL,
+   username nchar(10) NULL,
+   password nchar(10) NULL,
+   userLevel nchar(10) NULL
+
+2. Animals:
+   AnimalId int NOT NULL IDENTITY (1, 1),
+   Name nchar(10) NOT NULL,
+   Age int NOT NULL,
+   BirthDate date NULL,
+   FeedingsToday int NOT NULL,
+   FeedingsperDay int NOT NULL,
+   AnimalType nchar(10) NOT NULL,
+   HeathConcerns nchar(50) NULL,
+   Habitat nchar(15) NOT NULL
+
+3. Habitat:
+   ID int NOT NULL IDENTITY (1, 1),
+   Name nchar(20) NOT NULL,
+   DateCleaned date NULL,
+   FoodSource nchar(25) NOT NULL,
+   LastFeed date NULL,
+   Temperature nchar(10) NULL
+
+4. Employees:
+   Id int NOT NULL IDENTITY (1, 1),
+   FirstName nchar(20) NOT NULL,
+   LastName nchar(20) NOT NULL,
+   DateofHire date NOT NULL,
+   Age int NOT NULL,
+   Position nchar(20) NOT NULL,
+   HabitatId1 int NULL,
+   HabitatId2 int NULL,
+   HabitatId3 int NULL,
+   Salary nchar(10) NOT NULL
+```
+
 </details>
 
-I have added a lot of information to most of the fields that seemed relavent without overdoing it. In addition to additional fields I increased the amount of situations it can handle. So previously it only handled looking for animal by type in a single list of 1 of each animal type. But for Animal I added a search for Name, Type and SQL ID.
-<details><summary>New animal search types</summary>
-  <p>
-  ~~~
-  
-        // choice on what to search by
-        System.out.println("Welcome to the animal record section. \n Would you look someone up by the animal ID, Type, or Name? Please Enter 'ID', 'Type', or 'Name' \n");
+I added information to most of the fields that seemed relevant, without overdoing it. I also increased the number of situations the program can handle. Previously it only looked up an animal by type, in a single list with one of each animal type. For animals, I added a search by name, type, and SQL ID.
+
+<details markdown="1">
+<summary>New animal search types (excerpt)</summary>
+
+```java
+// choice on what to search by
+System.out.println("Welcome to the animal record section. \n Would you look someone up by the animal ID, Type, or Name? Please Enter 'ID', 'Type', or 'Name' \n");
+lookupChoice = scan.nextLine();
+
+//Verification for selection
+if(lookupChoice.toUpperCase().contains("NAME") == false && lookupChoice.toUpperCase().contains("ID") == false && lookupChoice.toUpperCase().contains("TYPE") == false){
+    while( lookupChoice.toUpperCase().contains("NAME") == false && lookupChoice.toUpperCase().contains("ID") && lookupChoice.toUpperCase().contains("TYPE") == false){
+        System.out.println("Invalid choice\n");
+        System.out.println("Invalid animal ID, Type, or Name? Please Enter 'ID', 'Type', or 'Name' \n");
         lookupChoice = scan.nextLine();
-    
-        //Verification for selection
-        if(lookupChoice.toUpperCase().contains("NAME") == false && lookupChoice.toUpperCase().contains("ID") == false && lookupChoice.toUpperCase().contains("TYPE") == false){
-            while( lookupChoice.toUpperCase().contains("NAME") == false && lookupChoice.toUpperCase().contains("ID") && lookupChoice.toUpperCase().contains("TYPE") == false){
-                System.out.println("Invalid choice\n");
-                System.out.println("Invalid animal ID, Type, or Name? Please Enter 'ID', 'Type', or 'Name' \n");
-                lookupChoice = scan.nextLine();
-            }
-        }
-        
-        
-</p>
+    }
+}
+```
+
 </details>
 
-In addition to the new search typd for animals there is more for employees and Habitats. Habitats is just name and ID so similar to animal. Employees can do open searches on ID and Name as well. But Name then splits into a search for First name only, Last Name only or both.
+There are also new searches for employees and habitats. Habitats can be searched by name and ID, similar to animals. Employees can be searched by ID and name. A name search can use the first name only, the last name only, or both.
 
-And just like animal any result that matches more than one row of results in SQL will be iterated through and show all applicable results which was not capable with the original program.
+As with animals, any result that matches more than one SQL row is shown in full. The original program could not do that.
 
-<details><summary>New animal search types</summary>
-  <p>
-  ~~~
-    
-    Looking at the Name or ID choice.
-    System.out.println("Welcome to the employee record section. \n Would you look someone up by the employee ID or Name? Please Enter 'Name' or 'ID' \n");
+<details markdown="1">
+<summary>Employee search choices (excerpt)</summary>
+
+Looking at the name or ID choice.
+
+```java
+System.out.println("Welcome to the employee record section. \n Would you look someone up by the employee ID or Name? Please Enter 'Name' or 'ID' \n");
+lookupChoice = scan.nextLine();
+
+//Verification for selection
+if(lookupChoice.toUpperCase().contains("NAME") == false && lookupChoice.toUpperCase().contains("ID") == false){
+    while( lookupChoice.toUpperCase().contains("NAME") == false && lookupChoice.toUpperCase().contains("ID")){
+        System.out.println("Invalid choice\n");
+        System.out.println("Would you look someone up by the employee ID or Name? Please Enter 'Name' or 'ID'? \n");
         lookupChoice = scan.nextLine();
-        
-        //Verification for selection
-        if(lookupChoice.toUpperCase().contains("NAME") == false && lookupChoice.toUpperCase().contains("ID") == false){
-            while( lookupChoice.toUpperCase().contains("NAME") == false && lookupChoice.toUpperCase().contains("ID")){
-                System.out.println("Invalid choice\n");
-                System.out.println("Would you look someone up by the employee ID or Name? Please Enter 'Name' or 'ID'? \n");
-                lookupChoice = scan.nextLine();
-            }
-        }
-        then the logic for Name choices
-        if(lookupChoice.toUpperCase().contains("NAME")) {
+    }
+}
+```
+
+Then the logic for the name choices.
+
+```java
+if(lookupChoice.toUpperCase().contains("NAME")) {
+    System.out.println("Would you look by First name, last name or both? Please enter 'First', 'Last', or 'Both' \n");
+    lookup2 = scan.nextLine();
+     //Verification for selection
+    if(lookup2.toUpperCase().contains("FIRST") == false && lookup2.toUpperCase().contains("LAST") == false && lookup2.toUpperCase().contains("BOTH") == false ){
+        while(lookup2.toUpperCase().contains("FIRST") == false && lookup2.toUpperCase().contains("LAST") == false && lookup2.toUpperCase().contains("BOTH") == false){
+            System.out.println("Invalid choice\n");
             System.out.println("Would you look by First name, last name or both? Please enter 'First', 'Last', or 'Both' \n");
             lookup2 = scan.nextLine();
-             //Verification for selection
-            if(lookup2.toUpperCase().contains("FIRST") == false && lookup2.toUpperCase().contains("LAST") == false && lookup2.toUpperCase().contains("BOTH") == false ){
-                while(lookup2.toUpperCase().contains("FIRST") == false && lookup2.toUpperCase().contains("LAST") == false && lookup2.toUpperCase().contains("BOTH") == false){
-                    System.out.println("Invalid choice\n");
-                    System.out.println("Would you look by First name, last name or both? Please enter 'First', 'Last', or 'Both' \n");
-                    lookup2 = scan.nextLine();
-                }
-            }
-            if(lookup2.toUpperCase().contains("FIRST")){
-                System.out.println("Please enter the first name.");
-                first = scan.nextLine();
-                select = nameSearch(first, last);
-            }
-            else if(lookup2.toUpperCase().contains("LAST")){
-                System.out.println("Please enter the last name.");
-                last = scan.nextLine();
-                select = nameSearch(first, last);
-            }
-            else{
-                System.out.println("Please enter the first name.");
-                first = scan.nextLine();
-                System.out.println("Please enter the last name.");
-                last = scan.nextLine();
-                select = nameSearch(first, last);
-            }
         }
-        And theres verification for the ID that it's a valid ID
-        
-        System.out.println("Please enter the ID of the employee. \n");
-            
-            rs2 = statement.executeQuery("SELECT MAX(id) FROM EMPLOYEES");
-            
-            rs2.next();
-            
-            countId = rs2.getInt(1);
-            
-            System.out.println("Max ID currently is " + countId + ". \n");
-            
-            while (id == 0) {
-                System.out.print("Enter an integer: ");
-                try {
-                    id = scan.nextInt();
-                    if(id < 1 || id > countId){
-                        System.out.println("Invalid ID number. Please enter a valid employee ID number between 1 and " + countId + ".\n");
-                        id = scan.nextInt();
-                    }
-                }
-                catch (InputMismatchException e) {
-                    System.out.println("\tInvalid input must be a valid Employee ID. \n Max ID currently is " + countId + ". \n");
-                    scan.nextLine();  // Clear invalid input from scanner buffer.
-                }
-            }
-            
-            select = idSearch(id);
-</p>
+    }
+    if(lookup2.toUpperCase().contains("FIRST")){
+        System.out.println("Please enter the first name.");
+        first = scan.nextLine();
+        select = nameSearch(first, last);
+    }
+    else if(lookup2.toUpperCase().contains("LAST")){
+        System.out.println("Please enter the last name.");
+        last = scan.nextLine();
+        select = nameSearch(first, last);
+    }
+    else{
+        System.out.println("Please enter the first name.");
+        first = scan.nextLine();
+        System.out.println("Please enter the last name.");
+        last = scan.nextLine();
+        select = nameSearch(first, last);
+    }
+}
+```
+
+There is also a check that the ID is a valid ID.
+
+```java
+System.out.println("Please enter the ID of the employee. \n");
+
+rs2 = statement.executeQuery("SELECT MAX(id) FROM EMPLOYEES");
+
+rs2.next();
+
+countId = rs2.getInt(1);
+
+System.out.println("Max ID currently is " + countId + ". \n");
+
+while (id == 0) {
+    System.out.print("Enter an integer: ");
+    try {
+        id = scan.nextInt();
+        if(id < 1 || id > countId){
+            System.out.println("Invalid ID number. Please enter a valid employee ID number between 1 and " + countId + ".\n");
+            id = scan.nextInt();
+        }
+    }
+    catch (InputMismatchException e) {
+        System.out.println("\tInvalid input must be a valid Employee ID. \n Max ID currently is " + countId + ". \n");
+        scan.nextLine();  // Clear invalid input from scanner buffer.
+    }
+}
+
+select = idSearch(id);
+```
+
 </details>
 
-All the choices call a sql statement constructor method and returns that string and the actual query is don by a single statement in the main of each class. It's possible that I could even make a sql statment running query. and pass each statement to it. To minimize the amount of places connections are opened or close.
+Each choice calls a method that builds a SQL statement and returns that string. The query itself is run by a single statement in the main method of each class. I could go further and use one method that runs a SQL statement, and pass each statement to it, so connections are opened and closed in fewer places.
 
+{% include downloads.html %}
 
-**Links to project File Downloads**
-- [Application](ZooMonitoringSystem.zip)
-- [SQL Files and Bak](Codes_and_Backups_for_CS499_SQL.zip)
-
-
-**Portfolio Links**
-- [Professional Self-Assessment](index.html)
-- [Refinement Plan & Code Review](CodeReview.html)
-- [Enhancement One](Enhancement1.html)
-- [Enhancement Two](Enhancement2.html)
-- [Enhancement Three](Enhancement3.html)
+{% include portfolio-nav.html current="two" %}

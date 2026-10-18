@@ -1,2 +1,15 @@
 theme: jekyll-theme-midnight
 markdown: kramdown
+title: Kenneth Borges CS499 ePortfolio
+tagline: CS-499 computer science ePortfolio
+description: CS-499 ePortfolio for Kenneth Borges, with coursework reflections and three enhancements to a Java zoo monitoring application.
+lang: en
+url: https://kloaf11.github.io
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
