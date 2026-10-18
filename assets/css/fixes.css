@@ -1,0 +1,148 @@
+/* Small fixes layered on the Midnight theme. */
+
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  transform: translateY(-160%);
+  background: #1c1c1c;
+  color: #ffcc00;
+  padding: 8px 12px;
+  z-index: 200;
+  border: 1px solid #ffcc00;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+a:focus-visible,
+summary:focus-visible,
+.skip-link:focus {
+  outline: 2px solid #ffcc00;
+  outline-offset: 3px;
+}
+
+/* The theme paints the nav strip blue and uses a green button whose
+   white label does not meet contrast. Keep the same button, darker green. */
+#header nav {
+  background: transparent;
+}
+
+/* Floated header links collapse the bar when its height is auto. */
+#header nav ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#header nav ul li.fork + li.fork {
+  margin-left: 8px;
+}
+
+#header nav ul li a {
+  color: #ffffff;
+  background: #3f6b0a linear-gradient(#4a7c0f, #3f6b0a);
+  border-color: #2f5a08;
+}
+
+#header nav ul li a:hover,
+#header nav ul li a:focus {
+  color: #ffffff;
+  background: #2f5a08 linear-gradient(#3d6b0c, #2f5a08);
+  border-color: #244806;
+}
+
+section #title h1 {
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+section #title .credits {
+  color: #c8c2b4;
+}
+
+.portfolio-nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+details {
+  margin: 0 0 16px;
+}
+
+summary {
+  cursor: pointer;
+  color: #f0e7d5;
+  margin: 0 0 8px;
+}
+
+pre,
+.highlight {
+  max-width: 100%;
+  overflow: auto;
+}
+
+pre:focus,
+.highlight:focus {
+  outline: 2px solid #ffcc00;
+  outline-offset: 2px;
+}
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 20px;
+  aspect-ratio: 16 / 9;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media screen and (max-width: 720px) {
+  section #title h1 {
+    font-size: 30px;
+  }
+}
+
+/* The theme hides every nav below 480px and pulls the header off screen. */
+@media screen and (max-width: 480px) {
+  nav {
+    display: block;
+  }
+
+  #header {
+    position: static;
+    height: auto;
+    margin-top: 0;
+  }
+
+  #header nav {
+    display: block;
+    margin: 8px auto;
+  }
+
+  section {
+    margin-top: 12px;
+  }
+
+  section #title h1 {
+    font-size: 26px;
+  }
+
+  #header nav ul li.fork,
+  #header nav ul li.fork + li.fork {
+    float: none;
+    display: inline-block;
+    margin: 0 8px 8px 0;
+  }
+
+  section #title p {
+    font-size: 16px;
+  }
+}

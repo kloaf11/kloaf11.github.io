@@ -1,2 +1,15 @@
 theme: jekyll-theme-midnight
 markdown: kramdown
+title: Kenneth Borges
+tagline: "Cyber Security Engineer | Vulnerability Management, Linux Hardening, Database Security, Automation"
+description: Kenneth Borges, cyber security engineer in Central Florida. B.S. in Computer Science, Southern New Hampshire University, October 2021.
+lang: en
+url: https://kloaf11.github.io
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
